@@ -32,14 +32,14 @@ npm publish
 npm install three --save
 
 # 安装 @qt-react/animation-keyframe
-npm install @qt-react/animation-keyframe
+npm install ync-react-animation-keyframe
 ```
 
 #### 项目中调用
 
 ```js
 import React, { useState, useEffect } from 'react';
-import { JsAnimationKeyframe, ThreeAnimationKeyframe } from '@qt-react/animation-keyframe';
+import { JsAnimationKeyframe, ThreeAnimationKeyframe } from 'ync-react-animation-keyframe';
 
 function App() {
     let [images, setImages] = useState([]);
