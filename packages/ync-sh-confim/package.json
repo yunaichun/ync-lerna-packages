@@ -1,7 +1,7 @@
 {
   "name": "ync-sh-confim",
   "author": "yunaichun",
-  "version": "1.1.0",
+  "version": "0.0.1",
   "description": "命令行确认执行弹窗",
   "keywords": [
     "shell",
@@ -26,6 +26,5 @@
     "commander": "^4.0.0",
     "confirmation": "0.0.5",
     "inquirer": "^7.0.0"
-  },
-  "devDependencies": {}
+  }
 }
