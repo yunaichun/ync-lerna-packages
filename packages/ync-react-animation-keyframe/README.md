@@ -5,11 +5,6 @@
 - JsAnimationKeyframe 方法: 原生 js 加载图片序列
 - ThreeAnimationKeyframe 方法: three.js 加载图片序列。**内部实现 three.js 动态加载，且只加载指定模块。**
 
-## demo 地址
-
-- JsAnimationKeyframe 实现 demo: https://sss.staging.qingting.fm/qt-material-test/index.html#/animation
-- ThreeAnimationKeyframe 实现 demo: https://sss.staging.qingting.fm/qt-material-test/index.html#/three
-
 ## 如何开发
 
 ```bash
@@ -99,6 +94,11 @@ function App() {
 | textureOfPlane | object | 否 | [PlaneGeometry 平面配置](http://www.yanhuangxueyuan.com/threejs/docs/#api/zh/geometries/PlaneGeometry): 贴图依赖此平面 | {width: 4, height: 6.5} |
 | directionalLightConfig | object | 否 | [DirectionalLight 平行光配置](http://www.yanhuangxueyuan.com/threejs/docs/#api/zh/lights/DirectionalLight): 默认颜色配置即可显示图片本身样子；其中 position 为 x，y，z 轴距离 | {color: 0xffffff, intensity: 1, position: [0, 0, 60]} |
 | directionalLightConfig | object | 否 | [AmbientLight 环境光配置](http://www.yanhuangxueyuan.com/threejs/docs/#api/zh/lights/AmbientLight): 设置 show 的话图片会比本身更亮 | {show: false, color: 0xffffff} |
+
+## demo 地址
+
+- [JsAnimationKeyframe 实现 demo](https://sss.staging.qingting.fm/qt-material-test/index.html#/animation)
+- [ThreeAnimationKeyframe 实现 demo](https://sss.staging.qingting.fm/qt-material-test/index.html#/three)
 
 ## 参考地址
 

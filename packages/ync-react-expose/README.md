@@ -46,6 +46,10 @@ import Expose from "ync-react-expose"
 | expose | function | 否 | 曝光事件主体函数 | () => {} |
 | openDebugger | boolean | 否 | 控制台是否输出曝光跟踪: <br>1、元素信息：包括当前元素宽高、距离可视区域上下左右距离<br>2、时间信息：当前时间、上次离开时间、时间间隔 | false |
 
-## openDebugger 开启后详情如下
+## demo 地址
 
-![debugger](./debugger.png)
+- [测试地址，打开控制台查看](https://answera.top/react/expose)
+
+## openDebugger 开启
+
+![debugger](http://answera.top/html/debugger.png)
