@@ -1,0 +1,25 @@
+.toast-mask {
+  display: block;
+  position: fixed;
+  transform: translateY(-50%);
+  margin: auto;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1000;
+}
+.toast-mask .toast-content {
+  position: relative;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: #FFFFFF;
+  min-width: 120px;
+  opacity: 0.7;
+}
+.toast-mask .toast-content .content {
+  font-size: 14px;
+  white-space: pre-wrap;
+}
