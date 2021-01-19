@@ -12,7 +12,6 @@ module.exports = ({
     ext: '.html'
   }
 }) => {
-  console.log(22222, entry, spa)
   // == build 绝对路径
   const cwd = process.cwd();
   const rootPath = pathUtil.isAbsolute(entry) ? entry : pathUtil.resolve(cwd, entry);
