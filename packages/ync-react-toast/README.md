@@ -19,11 +19,11 @@ npm publish --access=public
 
 ```js
 // == 安装:  
-npm i ync-react-toast' --save
+npm i ync-react-toast --save
 
 // == 引用
 import Toast from 'ync-react-toast'
-import  'ync-react-toast/dist/index.css'
+import 'ync-react-toast/dist/index.css'
 
 // == 显示 Toast
 Toast.info({
