@@ -12,18 +12,18 @@ npm ci
 npm run build
 
 # 发布
-npm publish
+npm publish --access=public
 ```
 
 ## 如何使用
 
 ```js
-// == 安装:  
+// == 安装
 npm i ync-react-modal --save
 
 // == 引用
 import Modal from 'ync-react-modal'
-import Modal from 'ync-react-modal/dist/index.css'
+import 'ync-react-modal/dist/index.css'
 
 // == 打开弹窗
 Modal.show({

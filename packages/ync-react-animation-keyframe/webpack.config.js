@@ -10,7 +10,7 @@ module.exports = {
     path: path.resolve('dist'),
     filename: `index.js`,
     publicPath: '',
-    library: 'LoadImages',
+    library: 'AnimationKeyframe',
     libraryExport: 'default',
     libraryTarget: 'umd'
   },

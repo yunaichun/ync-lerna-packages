@@ -18,7 +18,7 @@ npm ci
 npm run build
 
 # 发布
-npm publish
+npm publish --access=public
 ```
 
 ## 如何使用
@@ -28,7 +28,7 @@ npm publish
 npm i ync-react-expose --save
 
 // == 引用
-import Expose from "ync-react-expose"
+import Expose from 'ync-react-expose'
 
 // == 调用
 <Expose seconds={10} openDebugger={false} expose={() => {
