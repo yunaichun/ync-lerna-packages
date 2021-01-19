@@ -1,7 +1,7 @@
 {
   "name": "ync-react-modal",
   "author": "yunaichun",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "React 弹窗方法",
   "keywords": [
     "React",
@@ -20,8 +20,6 @@
     "*"
   ],
   "license": "MIT",
-  "dependencies": {
-  },
   "devDependencies": {
     "@babel/core": "^7.6.2",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
