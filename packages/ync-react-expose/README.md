@@ -52,4 +52,4 @@ import Expose from "ync-react-expose"
 
 ## openDebugger 开启
 
-![debugger](http://answera.top/html/debugger.png)
+![debugger](https://answera.top/html/debugger.png)
