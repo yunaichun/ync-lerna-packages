@@ -1,0 +1,15 @@
+{
+  "name": "ync-react-browserrouter-server",
+  "version": "0.0.1",
+  "description": "koa2 服务，可以渲染 react browserrouter 构建的页面",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.1",
+    "koa-send": "^5.0.1"
+  }
+}
