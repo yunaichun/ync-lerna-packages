@@ -23,10 +23,7 @@ lerna add @babel/core --scope=ync-react-cli
 # 5、根据每个包的 package.json 为所有组件安装依赖
 lerna bootstrap
 
-# 6、发布指定commit-id的代码
-lerna publish <commit-id> 
-
-# 7、批量发布组件: 批量发布前到每个组件内部完成构建
+# 6、批量发布组件: 批量发布前到每个组件内部完成构建
 lerna publish
 ```
 
