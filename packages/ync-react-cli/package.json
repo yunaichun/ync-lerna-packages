@@ -1,7 +1,7 @@
 {
   "name": "ync-react-cli",
   "author": "yunaichun",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "bin": {
     "ync-react-cli": "bin/index.js"
   },

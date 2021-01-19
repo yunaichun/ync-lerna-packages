@@ -1,6 +1,6 @@
 {
   "name": "ync-react-browserrouter-server",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "koa2 服务，可以渲染 react browserrouter 构建的页面",
   "main": "index.js",
   "scripts": {
