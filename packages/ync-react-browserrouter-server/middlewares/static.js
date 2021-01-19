@@ -3,9 +3,8 @@ const pathUtil = require('path');
 const send = require('koa-send');
 
 // == 自定义 SPA 渲染
-// == 关于普通函数参数：
-// == 1、默认一定会有 entry 和 spa 参数
-// == 2、如果只传入一个参数，spa 参数取默认值
+// == 1、如果不传入参数、传入空对象、非对象会取默认值
+// == 2、如果传入对象，但是仅传入 entry 或 spa，另一个取默认
 module.exports = ({
   entry='build',
   spa={

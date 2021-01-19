@@ -3,8 +3,8 @@ const createHealth = require('./middlewares/health');
 const createStatic = require('./middlewares/static');
 
 class StaticServe extends Koa {
-  // == 1、如果不传入参数，会有默认值
-  // == 2、如果传入 { spa: true }
+  // == 1、如果不传入参数、传入空对象、非对象会取默认值
+  // == 2、如果传入对象，但是仅传入 spa 或 health，另一个取默认
   constructor({
     spa={
       entry: 'build',
