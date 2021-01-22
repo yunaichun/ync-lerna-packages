@@ -1,0 +1,37 @@
+{
+  "name": "ync-babel-utils",
+  "author": "yunaichun",
+  "version": "0.0.1",
+  "description": "babel,parser,generator",
+  "keywords": [
+    "babel",
+    "parser",
+    "generator"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yunaichun/ync-lerna-packages.git"
+  },
+  "scripts": {
+    "test": "jest --coverage",
+    "build": "webpack"
+  },
+  "main": "dist/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/generator": "^7.12.11",
+    "@babel/parser": "^7.12.11",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/traverse": "^7.12.12"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "jest": "^26.6.3",
+    "jest-config": "^26.6.3",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  }
+}
