@@ -11,9 +11,6 @@ npm ci
 # 测试
 npm run test
 
-# 发布前构建
-npm run build
-
 # 发布
 npm publish --access=public
 ```
