@@ -3,7 +3,7 @@
 加载图片序列的 2 种方法封装:
 
 - JsAnimationKeyframe 方法: 原生 js 加载图片序列
-- ThreeAnimationKeyframe 方法: three.js 加载图片序列。**内部实现 three.js 动态加载，且只加载指定模块。**
+- ThreeAnimationKeyframe 方法: three.js 加载图片序列
 
 ## 如何开发
 
@@ -63,12 +63,10 @@ function App() {
             }}
         />
         <ThreeAnimationKeyframe
-            seconds={150}
+            seconds={75}
             images={images}
-            style={{
-                width: '100%',
-                height: '100vh'
-            }}
+            width={(window.innerHeight - 410) * (7/5.37)}
+            height={window.innerHeight - 410}
         />
     </>;
 }
@@ -88,12 +86,8 @@ function App() {
 | --- | --- | ---- | --- | --- |
 | seconds | number | 否 | 每张图片切换时间，单位毫秒 | 150 |
 | images | array | 否 | 动态 import 引入的图片列表 | [] |
-| style | object | 否 | 渲染容器的样式 | {} |
-| rendererConfig | object | 否 | [WebGLRenderer 配置](http://www.yanhuangxueyuan.com/threejs/docs/#api/zh/renderers/WebGLRenderer) | {width: window.innerWidth, height: window.innerHeight} |
-| cameraConfig | object | 否 | [PerspectiveCamera 配置](http://www.yanhuangxueyuan.com/threejs/docs/#api/zh/cameras/PerspectiveCamera) ；其中 position 为 x，y，z 轴距离 | {fov: 45, aspect: window.innerWidth/window.innerHeight, near: 0.1, far: 1000, position: [0, 0, 10]} |
-| textureOfPlane | object | 否 | [PlaneGeometry 平面配置](http://www.yanhuangxueyuan.com/threejs/docs/#api/zh/geometries/PlaneGeometry): 贴图依赖此平面 | {width: 4, height: 6.5} |
-| directionalLightConfig | object | 否 | [DirectionalLight 平行光配置](http://www.yanhuangxueyuan.com/threejs/docs/#api/zh/lights/DirectionalLight): 默认颜色配置即可显示图片本身样子；其中 position 为 x，y，z 轴距离 | {color: 0xffffff, intensity: 1, position: [0, 0, 60]} |
-| directionalLightConfig | object | 否 | [AmbientLight 环境光配置](http://www.yanhuangxueyuan.com/threejs/docs/#api/zh/lights/AmbientLight): 设置 show 的话图片会比本身更亮 | {show: false, color: 0xffffff} |
+| width | number | 否 | 图片宽度 | window.innderWidth |
+| height | number | 否 | 图片高度（可以用图片的宽度 * 高宽比） | window.innderHeight |
 
 ## demo 地址
 

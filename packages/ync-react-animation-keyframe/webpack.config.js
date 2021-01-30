@@ -58,6 +58,12 @@ module.exports = {
       commonjs: "three/src/cameras/PerspectiveCamera.js",
       amd: "three/src/cameras/PerspectiveCamera.js"
     },
+    'three/src/math/Vector2.js': {
+      root: "PerspectiveCamera",
+      commonjs2: "three/src/math/Vector2.js",
+      commonjs: "three/src/math/Vector2.js",
+      amd: "three/src/math/Vector2.js"
+    },
     'three/src/geometries/PlaneGeometry.js': {
       root: "PlaneGeometry",
       commonjs2: "three/src/geometries/PlaneGeometry.js",
