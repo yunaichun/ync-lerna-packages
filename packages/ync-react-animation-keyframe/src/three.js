@@ -58,11 +58,12 @@ export default ({
     if (THREE && images.length) genTextures();
   }, [images, THREE]);
 
+  // == 初始化材质
   useEffect(() => {
     if (Textures.length) initMesh();
   }, [Textures]);
 
-  // == 图片序列动画
+  // == 添加到页面，同时循环播放
   useEffect(() => {
     if (Mesh) {
       addToPage();
@@ -132,7 +133,7 @@ export default ({
 
   const initCamera = () => {
     const { width, height } = getRendererSize();
-    // == 这里很关键: 取渲染器最大值，保证可以完整看到渲染器内容
+    // == 这里很关键: 由于45度仰角，取渲染器宽高最大值，保证可以完整看到渲染器内容
     const far = Math.max(width, height);
     // == fov、aspect、near、far
     const camera = new THREE.PerspectiveCamera(
