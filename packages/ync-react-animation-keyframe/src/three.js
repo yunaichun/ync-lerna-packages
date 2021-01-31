@@ -176,7 +176,9 @@ export default ({
   
   const addToPage = () => {
     const parent = ref.current;
-    Renderer.domElement.style.margin = 'auto';
+    const [safeWidth, safeHeight] = getSafeSize();
+    const top = (height - safeHeight) / 2;
+    Renderer.domElement.style.margin = `${top}px auto`;
     parent.appendChild(Renderer.domElement);
   }
   
