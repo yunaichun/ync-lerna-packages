@@ -12,7 +12,9 @@ export default ({
   let [Scene, setScene] = useState(null);
   let [Camera, setCamera] = useState(null);
   let [Mesh, setMesh] = useState(null);
+  let [FirstTexture, setFirstTexture] = useState();
   let [Textures, setTextures] = useState([]);
+  let [loaded, setLoaded] = useState(false);
   let [timer, index, forward] = [null, 0, true];
 
   // == 动态导入 three.js
@@ -53,27 +55,36 @@ export default ({
     if (Renderer && Scene) initCamera();
   }, [Renderer, Scene]);
 
-  // == 初始化贴图
+  // == 生成第一张贴图
+  useEffect(() => {
+    if (THREE && images.length) genFirstTexture();
+  }, [THREE, images]);
+
+  // == 初始化材质
+  useEffect(() => {
+    if (FirstTexture) initMesh();
+  }, [FirstTexture]);
+
+  // == 添加到页面
+  useEffect(() => {
+    if (Mesh) addToPage();
+  }, [Mesh]);
+  
+  // == 生成所有贴图
   useEffect(() => {
     if (THREE && images.length) genTextures();
   }, [images, THREE]);
 
-  // == 初始化材质
+  // == 播放动画
   useEffect(() => {
-    if (Textures.length) initMesh();
-  }, [Textures]);
-
-  // == 添加到页面，同时循环播放
-  useEffect(() => {
-    if (Mesh) {
-      addToPage();
+    if (Mesh && loaded && FirstTexture && Textures.length) {
       loopAnimation();
       return () => {
         if (timer) clearTimeout(timer);
       }
     }
-  }, [Mesh]);
-  
+  }, [Mesh, FirstTexture, loaded, Textures]);
+
   // == 宽高参数校验，不能超出屏幕宽高，否则以某一个纬度等比缩放
   const getSafeSize = () => {
     let [safeWidth, safeHeight] = [width, height];
@@ -147,10 +158,18 @@ export default ({
     setCamera(camera);
   }
   
+  const genFirstTexture = () => {
+    const firstTexture = new THREE.TextureLoader().load(images[0], () => {
+      setFirstTexture(firstTexture);
+    });
+  }
+  
   const genTextures = () => {
     let textures = [];
     for (let i = 0, len = images.length; i < len; i++) { 
-      const texture = new THREE.TextureLoader().load(images[i]);
+      const texture = new THREE.TextureLoader().load(images[i], () => {
+        if (i === (len - 1)) setLoaded(true)
+      });
       textures.push(texture);
     }
     setTextures(textures);
@@ -160,8 +179,9 @@ export default ({
     // == 保证贴图完整占满渲染器
     const { width, height } = getRendererSize();
     const geometry = new THREE.PlaneGeometry(width, height);
+    console.log(45678, FirstTexture)
     const material = new THREE.MeshLambertMaterial({
-      map: Textures[0],
+      map: FirstTexture,
       side: 2,
       // == 透明贴图
       // == https://blog.csdn.net/qq_30100043/article/details/79737692
@@ -179,6 +199,7 @@ export default ({
     const [safeWidth, safeHeight] = getSafeSize();
     const top = (height - safeHeight) / 2;
     Renderer.domElement.style.margin = `${top}px auto`;
+    Renderer.render(Scene, Camera);
     parent.appendChild(Renderer.domElement);
   }
   
