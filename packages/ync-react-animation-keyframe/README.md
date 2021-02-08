@@ -87,12 +87,14 @@ function App() {
 | seconds | number | 否 | 每张图片切换时间，单位毫秒 | 150 |
 | images | array | 否 | 动态 import 引入的图片列表 | [] |
 | width | number | 否 | 图片宽度 | window.innderWidth |
-| height | number | 否 | 图片高度（可以用图片的宽度 * 高宽比） | window.innderHeight |
+| height | number | 否 | 图片高度 | window.innderHeight |
+| style | object | 否 | 容器的样式 | {} |
 
 ## demo 地址
 
 - [JsAnimationKeyframe 实现 demo](https://sss.staging.qingting.fm/qt-material-test/index.html#/animation)
 - [ThreeAnimationKeyframe 实现 demo](https://sss.staging.qingting.fm/qt-material-test/index.html#/three)
+- [年度听书报告](https://bp.qingting.fm/activities/ting-report_pre/index.html)
 
 ## 参考地址
 

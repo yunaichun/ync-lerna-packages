@@ -4,7 +4,8 @@ export default ({
   seconds=150,
   images=[],
   width=window.innerWidth,
-  height=window.innerHeight,  
+  height=window.innerHeight,
+  style={},
 }) => {
   const ref = useRef();
   let [THREE, setTHREE] = useState();
@@ -91,17 +92,18 @@ export default ({
     const [widowWidth, windowHeight] = [window.innerWidth, window.innerHeight];
     const [widthRadio, heightRadio] = [safeWidth / widowWidth, safeHeight / windowHeight];
 
-    // == 超出屏幕宽度
+    // == 超出屏幕宽度：宽度最大为屏幕宽度，超出后高度以宽度适配
     if (widthRadio > 1) {
       safeWidth = widowWidth;
       safeHeight = safeHeight / widthRadio;
     }
 
-    // == 超出屏幕高度
+    // == 超出屏幕高度：高度最大为屏幕高度，超出后宽度以高度适配
     if (heightRadio > 1) {
       safeWidth = safeWidth / heightRadio;
       safeHeight = windowHeight;
     }
+    
     return [safeWidth, safeHeight];
   }
 
@@ -144,11 +146,11 @@ export default ({
 
   const initCamera = () => {
     const { width, height } = getRendererSize();
-    // == 这里很关键: 由于45度仰角，取渲染器宽高最大值，保证可以完整看到渲染器内容
-    const far = Math.max(width, height);
+    // == 这里很关键: 由于仰角 90 度，则相机距离渲染器 2 / height，可以保证渲染器完整在屏幕内
+    const far = height / 2;
     // == fov、aspect、near、far
     const camera = new THREE.PerspectiveCamera(
-      45,
+      90,
       width / height,
       0.1,
       far
@@ -179,7 +181,6 @@ export default ({
     // == 保证贴图完整占满渲染器
     const { width, height } = getRendererSize();
     const geometry = new THREE.PlaneGeometry(width, height);
-    console.log(45678, FirstTexture)
     const material = new THREE.MeshLambertMaterial({
       map: FirstTexture,
       side: 2,
@@ -197,10 +198,12 @@ export default ({
   const addToPage = () => {
     const parent = ref.current;
     const [safeWidth, safeHeight] = getSafeSize();
-    const top = (height - safeHeight) / 2;
-    Renderer.domElement.style.margin = `${top}px auto`;
     Renderer.render(Scene, Camera);
-    parent.appendChild(Renderer.domElement);
+    if (parent) {
+      parent.style.width = `${safeWidth}px`;
+      parent.style.height = `${safeHeight}px`;
+      parent.appendChild(Renderer.domElement);
+    }
   }
   
   const loopAnimation = () => {
@@ -219,5 +222,5 @@ export default ({
     timer = setTimeout(loopAnimation, seconds);
   }
 
-  return <div ref={ref}></div>
+  return <div ref={ref} style={{margin: 'auto', ...style}}></div>
 }
