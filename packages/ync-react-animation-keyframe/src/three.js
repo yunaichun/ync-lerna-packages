@@ -90,15 +90,16 @@ export default ({
   const getSafeSize = () => {
     let [safeWidth, safeHeight] = [width, height];
     const [widowWidth, windowHeight] = [window.innerWidth, window.innerHeight];
-    const [widthRadio, heightRadio] = [safeWidth / widowWidth, safeHeight / windowHeight];
 
     // == 超出屏幕宽度：宽度最大为屏幕宽度，超出后高度以宽度适配
+    const widthRadio = safeWidth / widowWidth;
     if (widthRadio > 1) {
       safeWidth = widowWidth;
       safeHeight = safeHeight / widthRadio;
     }
 
     // == 超出屏幕高度：高度最大为屏幕高度，超出后宽度以高度适配
+    const heightRadio = safeHeight / windowHeight;
     if (heightRadio > 1) {
       safeWidth = safeWidth / heightRadio;
       safeHeight = windowHeight;
