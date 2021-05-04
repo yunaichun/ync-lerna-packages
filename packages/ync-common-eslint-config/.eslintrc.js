@@ -1,0 +1,1 @@
+module.exports = {"extends":["ync-common-eslint-config/lib/eslint/react.js","prettier","ync-common-eslint-config/lib/eslint/base.js"],"overrides":[{"files":["**/*.ts","**/*.tsx"],"extends":["ync-common-eslint-config/lib/eslint/typescript.js"]}]}
