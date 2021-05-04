@@ -1,7 +1,7 @@
 const commander = require('commander');
 const log = console.log;
 
-const initHelp = ({packageJson}) => {
+const initHelp = ({ packageJson }) => {
   commander
     .version(packageJson.version)
     .option('-a, --alias', '默认值: false, 是否使用了 webpack alias')

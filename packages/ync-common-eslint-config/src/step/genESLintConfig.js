@@ -5,7 +5,7 @@ const genESLintConfigFile = async (options) => {
   const config = {
     extends: [],
   };
-  
+
   if (framework === 'react') {
     config.extends.push(`${packageJson.name}/lib/eslint/react.js`, `prettier`);
   }
@@ -28,7 +28,6 @@ const genESLintConfigFile = async (options) => {
 
   config.extends.push(`${packageJson.name}/lib/eslint/base.js`);
 
-  console.log(22222, config)
   fs.writeFileSync('.eslintrc.js', `module.exports = ${JSON.stringify(config)}`);
 }
 

@@ -1,4 +1,4 @@
-module.exports ={
+module.exports = {
   settings: {
     'import/resolver': {
       alias: {

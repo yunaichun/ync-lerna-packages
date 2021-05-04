@@ -6,11 +6,11 @@ const packageJson = require('../package.json');
 
 class Creation {
   async do() {
-    const commander = await initHelp({packageJson});
+    const commander = await initHelp({ packageJson });
     const options = commander.opts();
-    await installPkgs({...options, packageJson});
-    await genESLintConfig({...options, packageJson});
-    await genPrettierConfig({...options, packageJson});
+    await installPkgs({ ...options, packageJson });
+    await genESLintConfig({ ...options, packageJson });
+    await genPrettierConfig({ ...options, packageJson });
   }
 }
 
