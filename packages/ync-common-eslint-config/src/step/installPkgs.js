@@ -29,7 +29,19 @@ const installPkgs = async (options) => {
     pkgs.push('eslint-plugin-cypress');
   }
 
-  return pkgs.length > 0 && spawn('npm', ['install', ...pkgs, '--save-dev'], { stdio: 'inherit' });
+  return new Promise((resolve) => {
+    if (pkgs.length > 0) {
+      const child = spawn(command, args, { ...options, stdio: 'inherit' });
+      child.on('close', (code) => {
+        if (code !== 0) {
+          throw new Error(`child exit with ${code}`);
+        }
+        resolve(undefined);
+      });
+    } else {
+      resolve(undefined);
+    }
+  });
 }
 
 module.exports = installPkgs;
