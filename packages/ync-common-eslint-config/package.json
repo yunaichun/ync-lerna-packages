@@ -1,7 +1,7 @@
 {
   "name": "ync-common-eslint-config",
   "author": "yunaichun",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "bin": {
     "ync-eslint-config": "bin/index.js"
   },
@@ -36,11 +36,11 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-taro": "^3.2.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "standard-version": "^9.2.0",
-    "typescript": "^4.2.4",
-    "eslint-plugin-taro": "^3.2.4"
+    "typescript": "^4.2.4"
   },
   "dependencies": {
     "@babel/core": "^7.13.16",

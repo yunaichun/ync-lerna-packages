@@ -31,8 +31,8 @@ const installPkgs = async (options) => {
 
   return new Promise((resolve) => {
     if (pkgs.length > 0) {
-      const child = spawn(command, args, { ...options, stdio: 'inherit' });
-      child.on('close', (code) => {
+      const child = spawn('npm', ['install', ...pkgs, '--save-dev'], { stdio: 'inherit' });
+      child.on('close', code => {
         if (code !== 0) {
           throw new Error(`child exit with ${code}`);
         }

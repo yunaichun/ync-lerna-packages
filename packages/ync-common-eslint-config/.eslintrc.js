@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: ['./lib/base.js', 'prettier'],
+  extends: ['./lib/eslint/base.js', 'prettier'],
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx'],

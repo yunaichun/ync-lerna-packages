@@ -22,10 +22,10 @@ npm publish
 
 ```bash
 # 全局安装
-npm install ync-common-eslint-config -g
+npm install ync-common-eslint-config -D
 
 # 使用方法
-qt-eslint-config -t -a -f react
+npx ync-eslint-config -t -a -f react
 ```
 
 ## 参数描述
@@ -48,7 +48,9 @@ qt-eslint-config -t -a -f react
 "editor.formatOnSave": true,
 "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  },
+},
+"javascript.format.enable": true,
+"javascript.eslint.enable": true
 ```
 
 3. 重新启动 vscode
