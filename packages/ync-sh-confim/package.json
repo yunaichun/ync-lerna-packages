@@ -1,7 +1,7 @@
 {
   "name": "ync-sh-confim",
   "author": "yunaichun",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "命令行确认执行弹窗",
   "keywords": [
     "shell",
@@ -26,5 +26,9 @@
     "commander": "^4.0.0",
     "confirmation": "0.0.5",
     "inquirer": "^7.0.0"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^18.2.1",
+    "ync-common-eslint-config": "0.0.9"
   }
 }
