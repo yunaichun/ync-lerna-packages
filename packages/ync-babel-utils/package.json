@@ -1,7 +1,7 @@
 {
   "name": "ync-babel-utils",
   "author": "yunaichun",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "babel,parser,generator",
   "keywords": [
     "babel",
@@ -29,9 +29,11 @@
     "@babel/plugin-transform-modules-commonjs": "^7.12.1",
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
+    "eslint-config-airbnb": "^18.2.1",
     "jest": "^26.6.3",
     "jest-config": "^26.6.3",
     "webpack": "^4.41.0",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.9",
+    "ync-common-eslint-config": "0.0.9"
   }
 }

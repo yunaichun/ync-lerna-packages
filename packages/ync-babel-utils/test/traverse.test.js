@@ -8,10 +8,10 @@ test('测试 traverse 函数', () => {
   }`;
   const ast = parser(source);
   const modifiedAst = traverse(ast, {
-      // == 修改了函数的名称
-      FunctionDeclaration: function(path) {
-          path.node.id.name = 'x';
-      }
+    // == 修改了函数的名称
+    FunctionDeclaration: function (path) {
+      path.node.id.name = 'x';
+    }
   });
   const modifiedSouce = transform(modifiedAst);
   // console.log(1111, modifiedSouce)

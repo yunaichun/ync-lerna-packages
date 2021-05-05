@@ -4,8 +4,8 @@ const transform = require('../src/transform');
 const traverse = require('../src/traverse');
 
 module.exports = {
-    generator,
-    parser,
-    transform,
-    traverse,
+  generator,
+  parser,
+  transform,
+  traverse,
 }
