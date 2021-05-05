@@ -1,19 +1,23 @@
 {
-	"presets": [
+    "presets": [
         "@babel/preset-env",
         "@babel/preset-react"
     ],
-	"plugins": [
+    "plugins": [
         "@babel/plugin-transform-runtime",
         "@babel/plugin-syntax-dynamic-import",
         "@babel/plugin-proposal-class-properties"
     ],
-	"env": {
+    "env": {
         "development": {
-            "plugins": ["@babel/plugin-transform-modules-commonjs"]
+            "plugins": [
+                "@babel/plugin-transform-modules-commonjs"
+            ]
         },
         "test": {
-            "plugins": ["@babel/plugin-transform-modules-commonjs"]
+            "plugins": [
+                "@babel/plugin-transform-modules-commonjs"
+            ]
         }
     }
 }

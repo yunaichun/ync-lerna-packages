@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
-export const JsAnimationKeyframe = ({seconds=150, images=[], style={}}) => {
+export const JsAnimationKeyframe = ({ seconds = 150, images = [], style = {} }) => {
   let [index, setIndex] = useState(0);
   let timer = null;
-  
+
   useEffect(() => {
     if (images.length) loopAnimation();
 
     return () => {
-        if (timer) clearTimeout(timer);
+      if (timer) clearTimeout(timer);
     }
   }, [images]);
 
@@ -26,10 +26,10 @@ export const JsAnimationKeyframe = ({seconds=150, images=[], style={}}) => {
   }
 
   return images.map((i, j) => {
-    return <img 
-        key={i}
-        src={i}
-        style={{...style, display: j === index ? 'block' : 'none'}}
+    return <img
+      key={i}
+      src={i}
+      style={{ ...style, display: j === index ? 'block' : 'none' }}
     />
   });
 }

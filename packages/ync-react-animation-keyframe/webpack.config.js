@@ -5,7 +5,7 @@ module.exports = {
   mode: 'production',
 
   entry: './src/index.js',
-  
+
   output: {
     path: path.resolve('dist'),
     filename: `index.js`,
@@ -33,7 +33,7 @@ module.exports = {
   plugins: [
   ],
 
-  externals: { 
+  externals: {
     'react': {
       root: "React",
       commonjs2: "react",

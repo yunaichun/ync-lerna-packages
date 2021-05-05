@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 export default ({
-  seconds=150,
-  images=[],
-  width=window.innerWidth,
-  height=window.innerHeight,
-  style={},
+  seconds = 150,
+  images = [],
+  width = window.innerWidth,
+  height = window.innerHeight,
+  style = {},
 }) => {
   const ref = useRef();
   let [THREE, setTHREE] = useState();
@@ -37,7 +37,7 @@ export default ({
     ]).then(modules => {
       if (modules.length) {
         let three = {};
-        modules.map(i => three = {...three, ...i})
+        modules.map(i => three = { ...three, ...i })
         setTHREE(three);
       }
     });
@@ -70,7 +70,7 @@ export default ({
   useEffect(() => {
     if (Mesh) addToPage();
   }, [Mesh]);
-  
+
   // == 生成所有贴图
   useEffect(() => {
     if (THREE && images.length) genTextures();
@@ -104,7 +104,7 @@ export default ({
       safeWidth = safeWidth / heightRadio;
       safeHeight = windowHeight;
     }
-    
+
     return [safeWidth, safeHeight];
   }
 
@@ -112,7 +112,7 @@ export default ({
     const [safeWidth, safeHeight] = getSafeSize();
     // == 渲染器
     const renderer = new THREE.WebGLRenderer({
-      antialias: false, 
+      antialias: false,
       alpha: true,
       precision: 'highp'
     });
@@ -121,7 +121,7 @@ export default ({
     // renderer.setClearColor(0xffffff);
     setRenderer(renderer);
   }
-  
+
   const initScene = () => {
     const scene = new THREE.Scene();
 
@@ -136,7 +136,7 @@ export default ({
 
     setScene(scene);
   }
-  
+
   const getRendererSize = () => {
     const rendererSize = Renderer.getSize(new THREE.Vector2());
     return {
@@ -160,16 +160,16 @@ export default ({
     camera.position.set(0, 0, far);
     setCamera(camera);
   }
-  
+
   const genFirstTexture = () => {
     const firstTexture = new THREE.TextureLoader().load(images[0], () => {
       setFirstTexture(firstTexture);
     });
   }
-  
+
   const genTextures = () => {
     let textures = [];
-    for (let i = 0, len = images.length; i < len; i++) { 
+    for (let i = 0, len = images.length; i < len; i++) {
       const texture = new THREE.TextureLoader().load(images[i], () => {
         if (i === (len - 1)) setLoaded(true)
       });
@@ -177,7 +177,7 @@ export default ({
     }
     setTextures(textures);
   }
-  
+
   const initMesh = () => {
     // == 保证贴图完整占满渲染器
     const { width, height } = getRendererSize();
@@ -195,7 +195,7 @@ export default ({
     Scene.add(mesh);
     setMesh(mesh);
   }
-  
+
   const addToPage = () => {
     const parent = ref.current;
     const [safeWidth, safeHeight] = getSafeSize();
@@ -206,7 +206,7 @@ export default ({
       parent.appendChild(Renderer.domElement);
     }
   }
-  
+
   const loopAnimation = () => {
     // == 渲染
     Renderer.render(Scene, Camera);
@@ -223,5 +223,5 @@ export default ({
     timer = setTimeout(loopAnimation, seconds);
   }
 
-  return <div ref={ref} style={{margin: 'auto', ...style}}></div>
+  return <div ref={ref} style={{ margin: 'auto', ...style }}></div>
 }
