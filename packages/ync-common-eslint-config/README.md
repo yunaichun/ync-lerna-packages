@@ -4,7 +4,7 @@
 
 ## 如何扩展此 cli 工具
 
-####相关命令
+#### 相关命令
 
 ```bash
 # 安装依赖
@@ -29,12 +29,11 @@ eslint-config-prettier
 二、eslint
 eslint
 eslint-plugin-import
-eslint-config-airbnb
-eslint-config-prettier
 
 1、js
 @babel/core
 @babel/eslint-parser
+eslint-config-airbnb [用到才安装]
 
 2、react
 eslint-plugin-react,
