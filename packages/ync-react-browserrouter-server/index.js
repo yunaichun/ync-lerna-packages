@@ -6,18 +6,18 @@ class StaticServe extends Koa {
   // == 1、如果不传入参数、传入空对象、非对象会取默认值
   // == 2、如果传入对象，但是仅传入 spa 或 health，另一个取默认
   constructor({
-    spa={
+    spa = {
       entry: 'build',
       spa: {
         name: 'index',
         ext: '.html'
       }
     },
-    health={
+    health = {
       path: '/health',
       body: 'ok'
     }
-  }={}) {
+  } = {}) {
     super();
     this.startMiddleware = [];
     this.endMiddleware = [];

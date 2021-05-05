@@ -1,0 +1,1 @@
+module.exports = {"extends":["ync-common-eslint-config/lib/eslint/javascript.js"]}

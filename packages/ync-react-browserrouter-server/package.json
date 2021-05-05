@@ -1,6 +1,6 @@
 {
   "name": "ync-react-browserrouter-server",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "koa2 服务，可以渲染 react browserrouter 构建的页面",
   "main": "index.js",
   "scripts": {
@@ -11,5 +11,9 @@
   "dependencies": {
     "koa": "^2.13.1",
     "koa-send": "^5.0.1"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^18.2.1",
+    "ync-common-eslint-config": "0.0.9"
   }
 }

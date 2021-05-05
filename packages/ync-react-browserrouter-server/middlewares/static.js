@@ -6,8 +6,8 @@ const send = require('koa-send');
 // == 1、如果不传入参数、传入空对象、非对象会取默认值
 // == 2、如果传入对象，但是仅传入 entry 或 spa，另一个取默认
 module.exports = ({
-  entry='build',
-  spa={
+  entry = 'build',
+  spa = {
     name: 'index',
     ext: '.html'
   }
@@ -17,7 +17,7 @@ module.exports = ({
   const rootPath = pathUtil.isAbsolute(entry) ? entry : pathUtil.resolve(cwd, entry);
   return async (ctx, next) => {
     let renderPath = ctx.path;
-    
+
     if (spa) {
       // == 1、静态资源
       // == ctx.path: '/static/media/24.b8660976.jpg'
@@ -44,7 +44,7 @@ module.exports = ({
     }
 
     // == 根目录 build 下的 renderPath 路径
-    await send(ctx, renderPath, {root: rootPath});
+    await send(ctx, renderPath, { root: rootPath });
     await next();
   }
 }
