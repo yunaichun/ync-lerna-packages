@@ -1,5 +1,7 @@
 const commander = require('commander');
-const log = console.log;
+const { green, cyan, yellow } = require('chalk');
+
+const { log } = console;
 
 const initHelp = ({ packageJson }) => {
   commander

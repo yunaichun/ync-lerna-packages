@@ -1,10 +1,10 @@
 module.exports = {
   root: true,
-  extends: ['./lib/eslint/base.js', 'prettier'],
+  extends: ['./lib/eslint/javascript.js'],
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx'],
-      extends: [require.resolve('./lib/typescript.js')],
+      extends: ['./lib/eslint/typescript.js'],
     },
   ],
 };

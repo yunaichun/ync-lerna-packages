@@ -1,10 +1,21 @@
 const path = require('path');
 
 module.exports = {
-  extends: ['./commen/ts.js'].map(require.resolve),
-  plugins: ['deprecation'],
+  extends: ['plugin:import/typescript', 'plugin:@typescript-eslint/recommended'],
+  parser: require.resolve('@typescript-eslint/parser'),
   parserOptions: { sourceType: 'module', project: path.join(process.cwd(), './tsconfig.json') },
+  plugins: ['deprecation'],
   rules: {
+    'import/extensions': ['error', 'ignorePackages', {
+      js: 'never',
+      jsx: 'never',
+      mjs: 'never',
+      ts: 'never',
+      tsx: 'never'
+    }],
+    'no-shadow': 'off', // replaced by ts-eslint rule below
+    '@typescript-eslint/no-shadow': 'error',
+
     // switch to typescript version rules
     // camelcase
     camelcase: 'off',
@@ -71,5 +82,5 @@ module.exports = {
     },
     // Append 'ts' extensions to Airbnb 'import/extensions' setting
     'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
-  },
+  }
 };

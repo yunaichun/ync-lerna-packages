@@ -2,11 +2,10 @@ const spawn = require('cross-spawn');
 
 const installPkgs = async (options) => {
   const { framework, typescript, alias, cypress } = options;
-  const pkgs = [];
+  const pkgs = ['eslint-config-airbnb'];
 
   if (framework === 'react') {
     pkgs.push(
-      'eslint-config-airbnb',
       'eslint-plugin-react',
       'eslint-plugin-react-hooks',
       'eslint-plugin-jsx-a11y',
@@ -15,19 +14,16 @@ const installPkgs = async (options) => {
 
   if (typescript) {
     pkgs.push(
+      '@typescript-eslint/parser',
       '@typescript-eslint/eslint-plugin',
       'eslint-import-resolver-typescript',
       'eslint-plugin-deprecation',
     );
   }
 
-  if (alias) {
-    pkgs.push('eslint-import-resolver-alias');
-  }
+  if (alias) pkgs.push('eslint-import-resolver-alias');
 
-  if (cypress) {
-    pkgs.push('eslint-plugin-cypress');
-  }
+  if (cypress) pkgs.push('eslint-plugin-cypress');
 
   return new Promise((resolve) => {
     if (pkgs.length > 0) {

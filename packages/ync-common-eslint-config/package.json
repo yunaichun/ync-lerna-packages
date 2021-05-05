@@ -1,14 +1,13 @@
 {
   "name": "ync-common-eslint-config",
   "author": "yunaichun",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "bin": {
     "ync-eslint-config": "bin/index.js"
   },
-  "description": "eslint, tslint, prettier 配置方案",
+  "description": "eslint, prettier 配置方案",
   "keywords": [
     "eslint",
-    "tslint",
     "prettier",
     "config"
   ],
@@ -18,7 +17,7 @@
   },
   "scripts": {
     "test": "node ./bin/index.js",
-    "link-test": "npm link && ync-common-eslint-config"
+    "link-test": "npm link && ync-eslint-config"
   },
   "preferGlobal": true,
   "license": "ISC",
@@ -26,9 +25,8 @@
     "@babel/plugin-proposal-decorators": "^7.13.15",
     "@babel/preset-env": "^7.13.15",
     "@babel/preset-react": "^7.13.13",
-    "@types/cross-spawn": "^6.0.2",
-    "@types/react": "17.0.3",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.1",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-import-resolver-typescript": "^2.4.0",
@@ -39,8 +37,7 @@
     "eslint-plugin-taro": "^3.2.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "standard-version": "^9.2.0",
-    "typescript": "^4.2.4"
+    "standard-version": "^9.2.0"
   },
   "dependencies": {
     "@babel/core": "^7.13.16",

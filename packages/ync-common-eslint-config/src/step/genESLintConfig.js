@@ -3,11 +3,11 @@ const fs = require('fs');
 const genESLintConfigFile = async (options) => {
   const { framework, typescript, alias, cypress, packageJson } = options;
   const config = {
-    extends: [],
+    extends: [`${packageJson.name}/lib/eslint/javascript.js`],
   };
 
   if (framework === 'react') {
-    config.extends.push(`${packageJson.name}/lib/eslint/react.js`, `prettier`);
+    config.extends.push(`${packageJson.name}/lib/eslint/react.js`);
   }
 
   if (typescript) {
@@ -18,15 +18,9 @@ const genESLintConfigFile = async (options) => {
     });
   }
 
-  if (alias) {
-    config.extends.push(`${packageJson.name}/lib/alias.js`);
-  }
+  if (alias) config.extends.push(`${packageJson.name}/lib/alias.js`);
 
-  if (cypress) {
-    config.extends.push(`${packageJson.name}/lib/cypress.js`);
-  }
-
-  config.extends.push(`${packageJson.name}/lib/eslint/base.js`);
+  if (cypress) config.extends.push(`${packageJson.name}/lib/cypress.js`);
 
   fs.writeFileSync('.eslintrc.js', `module.exports = ${JSON.stringify(config)}`);
 }

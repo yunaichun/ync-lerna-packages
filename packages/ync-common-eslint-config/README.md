@@ -4,6 +4,8 @@
 
 ## 如何扩展此 cli 工具
 
+####相关命令
+
 ```bash
 # 安装依赖
 npm ci
@@ -18,10 +20,44 @@ npm run link-test
 npm publish
 ```
 
+#### 项目相关 npm 包
+
+```code
+一、prettier
+eslint-config-prettier
+
+二、eslint
+eslint
+eslint-plugin-import
+eslint-config-airbnb
+eslint-config-prettier
+
+1、js
+@babel/core
+@babel/eslint-parser
+
+2、react
+eslint-plugin-react,
+eslint-plugin-react-hooks,
+eslint-plugin-jsx-a11y
+
+3、taro
+eslint-plugin-taro
+
+4、ts
+@typescript-eslint/parser
+eslint-import-resolver-typescript,
+@typescript-eslint/eslint-plugin,
+eslint-plugin-deprecation
+
+三、alias
+eslint-import-resolver-alias
+```
+
 ## 如何使用此 cli 工具
 
 ```bash
-# 全局安装
+# 依赖安装
 npm install ync-common-eslint-config -D
 
 # 使用方法
@@ -48,9 +84,7 @@ npx ync-eslint-config -t -a -f react
 "editor.formatOnSave": true,
 "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-},
-"javascript.format.enable": true,
-"javascript.eslint.enable": true
+}
 ```
 
 3. 重新启动 vscode
@@ -81,7 +115,7 @@ $ git config --global core.autocrlf false
 
 #### 实验型功能
 
-因为开启了 eslint 代码检测，项目会根据配置文件对代码进行检查，如果项目依赖了一些试验型的功能（装饰器，class-properties）时，需要手动安装对应的`babel`插件，并在 `babel.config.json` 跟 `webpack.config.js`里进行相应的配置。
+因为开启了 eslint 代码检测，项目会根据配置文件对代码进行检查，如果项目依赖了一些试验型的功能（装饰器，class-properties）时，需要手动安装对应的`babel`插件，并在 `babel.config.json`里进行相应的配置。
 
 ```
 /** babel.config.json */
@@ -92,23 +126,7 @@ $ git config --global core.autocrlf false
     ["@babel/plugin-proposal-class-properties", { "loose": true }]
   ]
 }
-
-/** webpack.config.js */
-{
-  test: /\.jsx?$/,
-  exclude: /node_modules/,
-  use: [
-    {
-      loader: 'babel-loader',
-      options: {
-        presets: [['@babel/preset-env', { modules: false }], ['@babel/preset-react']],
-      },
-    },
-  ],
-},
 ```
-
-⚠️ 如果`package.json`里面对`babel`做了相应的配置时，记得删除，它会覆盖`babel.config.json`里的配置。
 
 #### 文件的别名配置
 
@@ -128,25 +146,9 @@ $ git config --global core.autocrlf false
 
 ⚠️ 值得注意的是，我们的 alias 都必须使用`～/`而不是`@`来定义项目根目录，这么做的原因主要是`@`一般用于 npm 私有包的前缀。
 
-另外我们的 eslint 配置里，为了统一，默认的 alias 采用的也是`~/`。
-
-如果`jsconfig.json`文件报错，可以重启一些 ide。[issue](https://stackoverflow.com/questions/63124462/how-to-fix-file-node-modules-dotenv-types-not-found-error-coming-from-j)
-
-#### 对于 bable 插件命名问题
-
-babel 官方对插件命名已经更新，[来源](https://www.freecodecamp.org/news/were-nearing-the-7-0-babel-release-here-s-all-the-cool-stuff-we-ve-been-doing-8c1ade684039/)
-我们在使用一些插件时，建议使用 babel 新命名的包。
-如下：
-
-```
-/** 建议使用 */
-- @babel/plugin-proposal-class-properties
-
-/** 不建议使用 */
-- babel-plugin-transform-class-properties.
-```
-
 ## 参考资料
 
 - [eslint 官网](https://eslint.org)
 - [prettier 官网](https://prettier.io)
+- [VSCode 中使用 ESlint 和 prettier 的正确姿势](https://zhuanlan.zhihu.com/p/159426292)
+- [React配置eslint+Airbnb规则](https://www.jianshu.com/p/6f7a84e570aa)
