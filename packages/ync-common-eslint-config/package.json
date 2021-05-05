@@ -1,10 +1,11 @@
 {
   "name": "ync-common-eslint-config",
   "author": "yunaichun",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "bin": {
     "ync-eslint-config": "bin/index.js"
   },
+  "main": "./src/index.js",
   "description": "eslint, prettier 配置方案",
   "keywords": [
     "eslint",
