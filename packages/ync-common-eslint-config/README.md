@@ -67,8 +67,8 @@ npx ync-eslint-config -t -a -f react
 
 | 参数名 | 说明 | 默认值 |
 | --- | --- | --- |
+| -f， --framework | 项目使用的框架 , 不传则使用 Javascript 相关 Eslint 配置 | false |
 | -t， --typescript | 项目是否使用了 Typescript , 为 true 则添加 Typescript 相关 Eslint 配置 | false |
-| -f， --framework `<name>` | 项目使用的框架 , 不传则使用 Javascript 相关 Eslint 配置 | false |
 | -a， --alias | 项目是否使用了 webpack alias | false |
 | -c， --cypress | 项目是否使用了 Cypress | false |
 
@@ -114,7 +114,7 @@ $ git config --global core.autocrlf false
 
 #### 实验型功能
 
-因为开启了 eslint 代码检测，项目会根据配置文件对代码进行检查，如果项目依赖了一些试验型的功能（装饰器，class-properties）时，需要手动安装对应的`babel`插件，并在 `babel.config.json`里进行相应的配置。
+如果项目依赖了一些试验型的功能（装饰器，class-properties）时，需要手动安装对应的 babel 插件，并配置到 babel.config.json
 
 ```
 /** babel.config.json */
@@ -127,9 +127,9 @@ $ git config --global core.autocrlf false
 }
 ```
 
-#### 文件的别名配置
+#### 文件别名配置
 
-在写代码的时候，为了不想写太多`../../../`的相对路径，我们会定义一些 alias，然后在 webpack 里进行配置，但 vscode 并不支持直接跳转，可以在项目根目录下创建 `jsconfig.json` 文件，然后输入下面配置。
+vscode 并不支持相对路径直接跳转，可以在项目根目录下创建 jsconfig.json 
 
 ```
 /** jsconfig.json */
@@ -142,8 +142,6 @@ $ git config --global core.autocrlf false
   }
 }
 ```
-
-⚠️ 值得注意的是，我们的 alias 都必须使用`～/`而不是`@`来定义项目根目录，这么做的原因主要是`@`一般用于 npm 私有包的前缀。
 
 ## 参考资料
 
