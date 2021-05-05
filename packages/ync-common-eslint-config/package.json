@@ -1,7 +1,7 @@
 {
   "name": "ync-common-eslint-config",
   "author": "yunaichun",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "bin": {
     "ync-eslint-config": "bin/index.js"
   },
@@ -10,6 +10,11 @@
     "eslint",
     "prettier",
     "config"
+  ],
+  "files": [
+    "lib/*",
+    "bin/*",
+    "src/*"
   ],
   "repository": {
     "type": "git",
