@@ -8,7 +8,7 @@ module.exports = {
   mode: 'production',
 
   entry: './src/index.js',
-  
+
   output: {
     path: path.resolve('dist'),
     filename: `index.js`,
@@ -31,7 +31,7 @@ module.exports = {
         test: /\.(css|less)$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader','less-loader']
+          use: ['css-loader', 'less-loader']
         }),
       }
     ]
@@ -50,7 +50,7 @@ module.exports = {
     })
   ],
   // == 定义外部依赖，避免把react和react-dom打包进去
-  externals: { 
+  externals: {
     'react': {
       root: "React",
       commonjs2: "react",
