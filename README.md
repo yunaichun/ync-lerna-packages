@@ -11,18 +11,28 @@
 # 安装 lerna
 npm install -g lerna
 
-# 目录初始化
+# 初始化 lerna
 mkdir ync-lerna-packages && cd $_
 npx lerna init
 
 # 为指定包安装依赖
 lerna add @babel/core --scope=ync-react-cli
 
-# 根据每个包的 package.json 为所有组件安装依赖
+# 为所有组件安装依赖
 lerna bootstrap
 
-# 批量发布组件: 批量发布前到每个组件内部完成构建
+# 批量发布组件（批量发布前到每个组件内部完成构建）
 lerna publish
+```
+
+#### 安装 eslint prettier
+
+```bash
+# 依赖安装
+npm install ync-cli-eslint-config -D
+
+#  项目目录下执行操作（仅需要执行一次即可）
+npx ync-eslint-config -f react
 ```
 
 #### 安装 commit check
@@ -35,15 +45,6 @@ npm install ync-cli-commit-check -D
 npx ync-commit-check
 ```
 
-#### 安装 eslint prettier
-
-```bash
-# 依赖安装
-npm install ync-cli-eslint-config -D
-
-#  项目目录下执行操作（仅需要执行一次即可）
-npx ync-eslint-config -f react
-```
 
 ## 参考地址
 - [lerna 官方 repeo](https://github.com/lerna/lerna)
