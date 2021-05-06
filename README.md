@@ -5,26 +5,44 @@
 
 ## 如何使用
 
+#### lerna
+
 ```bash
-# 1、安装 lerna
+# 安装 lerna
 npm install -g lerna
 
-# 2、目录初始化
-mkdir mkdir ync-lerna-packages && cd $_
+# 目录初始化
+mkdir ync-lerna-packages && cd $_
 npx lerna init
 
-# 3、新建一个组件包
-cd packages && mkdir ync-react-cli && cd $_
-npm init
-
-# 4、为指定包安装依赖
+# 为指定包安装依赖
 lerna add @babel/core --scope=ync-react-cli
 
-# 5、根据每个包的 package.json 为所有组件安装依赖
+# 根据每个包的 package.json 为所有组件安装依赖
 lerna bootstrap
 
-# 6、批量发布组件: 批量发布前到每个组件内部完成构建
+# 批量发布组件: 批量发布前到每个组件内部完成构建
 lerna publish
+```
+
+#### 安装 commit check
+
+```bash
+# 依赖安装
+npm install ync-commit-check-cli -D
+
+# 项目目录下执行操作（仅需要执行一次即可）
+npx ync-commit-check
+```
+
+#### 安装 eslint prettier
+
+```bash
+# 依赖安装
+npm install ync-common-eslint-config -D
+
+#  项目目录下执行操作（仅需要执行一次即可）
+npx ync-eslint-config -f react
 ```
 
 ## 参考地址
