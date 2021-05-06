@@ -32,7 +32,7 @@ npx ync-commit-check
 
 | 参数名 | 说明 | 默认值 |
 | --- | --- | --- |
-| -e， --exclude | 排除某种工作流<br> c: 检验是否是 git 仓库且当前是否在 .git 目录平级 <br>i:安装依赖且初始化 husky <br>h: 创建 commit-msg 和 pre-commit Git Hooks 命令 <br>l: 创建 commitlint 和 lintstagedrc 文件 <br>v: 创建 standard-version 命令 <br> 备注：排除多个工作流以 , 分割 | N/A |
+| -e， --exclude | 排除某种工作流<br> c: 检验是否是 git 仓库且当前是否在 .git 目录平级 <br>i:安装依赖且初始化 husky <br>h: 创建 commit-msg 和 pre-commit Git Hooks 命令 <br>l: 创建 commitlint 和 lintstagedrc 文件 <br>s: 创建 standard-version 命令 <br> 备注：排除多个工作流以 , 分割 | N/A |
 
 ## 参考资料
 
