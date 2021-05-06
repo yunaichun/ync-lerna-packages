@@ -29,7 +29,7 @@ lerna publish
 
 ```bash
 # 依赖安装
-npm install ync-commit-check-cli -D
+npm install ync-cli-commit-check -D
 
 # 项目目录下执行操作（仅需要执行一次即可）
 npx ync-commit-check
@@ -39,7 +39,7 @@ npx ync-commit-check
 
 ```bash
 # 依赖安装
-npm install ync-common-eslint-config -D
+npm install ync-cli-eslint-config -D
 
 #  项目目录下执行操作（仅需要执行一次即可）
 npx ync-eslint-config -f react
