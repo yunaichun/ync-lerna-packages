@@ -7,14 +7,14 @@ const addLintstaged = async options => {
 
   // == 添加 commitlint
   fs.copyFileSync(
+    path.join(__dirname, '../../lib/commitlint.config.js'),
     path.join(process.cwd(), 'commitlint.config.js'),
-    path.join(__dirname, 'commitlint.config.js'),
   );
 
   // == 添加 lint-staged
   fs.copyFileSync(
+    path.join(__dirname, '../../lib/.lintstagedrc.js'),
     path.join(process.cwd(), '.lintstagedrc.js'),
-    path.join(__dirname, '.lintstagedrc.js'),
   );
 }
 
