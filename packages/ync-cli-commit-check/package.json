@@ -1,0 +1,43 @@
+{
+  "name": "ync-cli-commit-check",
+  "author": "yunaichun",
+  "version": "0.1.0",
+  "bin": {
+    "ync-commit-check": "bin/index.js"
+  },
+  "description": "husky, lint-staged, commit msg 代码提交规划检查",
+  "keywords": [
+    "husky",
+    "hooks",
+    "commitlint",
+    "lint-staged",
+    "standard-version"
+  ],
+  "files": [
+    "lib/*",
+    "bin/*",
+    "src/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yunaichun/ync-lerna-packages.git"
+  },
+  "scripts": {
+    "link": "npm link ync-cli-commit-check",
+    "test": "node ./bin/index.js"
+  },
+  "preferGlobal": true,
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^6.0.0",
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-angular": "^12.1.1",
+    "lint-staged": "^10.5.4",
+    "standard-version": "^9.3.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "commander": "^7.2.0",
+    "cross-spawn": "^7.0.3"
+  }
+}
