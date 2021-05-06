@@ -15,7 +15,7 @@ npm run link
 npm run test
 
 # 发布
-npm publish
+npm publish --access=public
 ```
 
 ## 如何使用此 cli 工具

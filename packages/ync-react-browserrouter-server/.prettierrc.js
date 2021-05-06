@@ -1,1 +1,0 @@
-module.exports = require("ync-common-eslint-config/lib/prettier.js")

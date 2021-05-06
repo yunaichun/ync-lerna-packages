@@ -18,7 +18,7 @@ npm ci
 npm run build
 
 # 发布
-npm publish --access=public
+npm publish
 ```
 
 ## 如何使用

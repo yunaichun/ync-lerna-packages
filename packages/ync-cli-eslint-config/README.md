@@ -17,7 +17,7 @@ npm run link
 npm run test
 
 # 发布
-npm publish
+npm publish --access=public
 ```
 
 #### 项目相关 npm 包
