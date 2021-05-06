@@ -1,0 +1,51 @@
+{
+  "name": "ync-commit-check-cli",
+  "author": "yunaichun",
+  "version": "0.0.2",
+  "bin": {
+    "ync-commit-check": "bin/index.js"
+  },
+  "main": "./src/index.js",
+  "description": "husky, lint-staged, commit msg 代码提交规划检查",
+  "keywords": [
+    "husky",
+    "hooks",
+    "commitlint",
+    "lint-staged",
+    "standard-version"
+  ],
+  "files": [
+    "lib/*",
+    "bin/*",
+    "src/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yunaichun/ync-lerna-packages.git"
+  },
+  "scripts": {
+    "test": "node ./bin/index.js",
+    "link-test": "npm link && ync-eslint-config",
+    "prepare": "husky install",
+    "release": "standard-version"
+  },
+  "preferGlobal": true,
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-angular": "^12.1.1",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "standard-version": "^9.3.0",
+    "ync-common-eslint-config": "0.0.13"
+  },
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "commander": "^7.2.0",
+    "cross-spawn": "^7.0.3"
+  }
+}
