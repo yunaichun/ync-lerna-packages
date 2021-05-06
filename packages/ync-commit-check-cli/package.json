@@ -26,7 +26,6 @@
   "scripts": {
     "test": "node ./bin/index.js",
     "link-test": "npm link && ync-eslint-config",
-    "prepare": "husky install",
     "release": "standard-version"
   },
   "preferGlobal": true,
