@@ -1,0 +1,57 @@
+{
+  "name": "ync-cli-eslint-config",
+  "author": "yunaichun",
+  "version": "0.1.0",
+  "bin": {
+    "ync-eslint-config": "bin/index.js"
+  },
+  "main": "./src/index.js",
+  "description": "eslint, prettier 配置方案",
+  "keywords": [
+    "eslint",
+    "prettier",
+    "config"
+  ],
+  "files": [
+    "lib/*",
+    "bin/*",
+    "src/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yunaichun/ync-lerna-packages.git"
+  },
+  "scripts": {
+    "link": "npm link ync-cli-eslint-config",
+    "test": "npx ync-eslint-config"
+  },
+  "preferGlobal": true,
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.1",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-deprecation": "^1.2.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-taro": "^3.2.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/eslint-parser": "^7.13.14",
+    "eslint": "^7.24.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-config-prettier": "^8.2.0",
+    "chalk": "^4.1.1",
+    "commander": "^7.2.0",
+    "cross-spawn": "^7.0.3"
+  }
+}
