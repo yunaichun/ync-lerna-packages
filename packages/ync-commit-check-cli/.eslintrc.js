@@ -1,0 +1,1 @@
+module.exports = {"extends":["/Users/yunaichun/Github/REACT/ync-commit-check-cli/node_modules/ync-common-eslint-config/lib/eslint/javascript.js"]}
