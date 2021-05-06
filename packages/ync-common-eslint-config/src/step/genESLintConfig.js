@@ -22,8 +22,8 @@ const genESLintConfigFile = async (options) => {
 
   if (cypress) config.extends.push(`${packageJson.name}/lib/cypress.js`);
 
-  // == 非 @ 开头的包取绝对路径
-  config.extends = config.extends.map(require.resolve)
+  // // == 非 @ 开头的包取绝对路径
+  // config.extends = config.extends.map(require.resolve)
 
   fs.writeFileSync('.eslintrc.js', `module.exports = ${JSON.stringify(config)}`);
 }
