@@ -10,10 +10,10 @@ class Creation {
   async do() {
     const commander = await initHelp({ packageJson });
     const options = commander.opts();
-    // await check({ ...options, packageJson });
-    // await installPkgs({ ...options, packageJson });
-    // await addHooks({ ...options, packageJson });
-    // await addLintstaged({ ...options, packageJson });
+    await check({ ...options, packageJson });
+    await installPkgs({ ...options, packageJson });
+    await addHooks({ ...options, packageJson });
+    await addLintstaged({ ...options, packageJson });
     await addScript({ ...options, packageJson });
   }
 }
