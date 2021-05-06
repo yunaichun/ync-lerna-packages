@@ -1,7 +1,7 @@
 {
   "name": "ync-cli-commit-check",
   "author": "yunaichun",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "bin": {
     "ync-commit-check": "bin/index.js"
   },
@@ -23,7 +23,7 @@
     "url": "https://github.com/yunaichun/ync-lerna-packages.git"
   },
   "scripts": {
-    "link": "npm link ync-cli-commit-check",
+    "link": "npm link",
     "test": "npx ync-commit-check"
   },
   "preferGlobal": true,
