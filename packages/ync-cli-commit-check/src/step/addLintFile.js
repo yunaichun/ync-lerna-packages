@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const addLintstaged = async options => {
+const addLintFile = async options => {
   const { exclude = '' } = options;
   if (exclude.split(',').indexOf('l') > -1) return;
 
@@ -18,4 +18,4 @@ const addLintstaged = async options => {
   );
 }
 
-module.exports = addLintstaged;
+module.exports = addLintFile;

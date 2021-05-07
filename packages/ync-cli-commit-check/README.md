@@ -1,6 +1,8 @@
 ## 简介
 
-- husky + lint-staged 对代码 commit
+- 采用 Angular 代码提交信息规范
+- 采用 [ync-cli-eslint-config](https://github.com/yunaichun/ync-lerna-packages/tree/master/packages/ync-cli-eslint-config) 对代码 lint 和 prettier
+- 采用 husky 接入 commit-msg 和 pre-commit 等 Git Hook
 
 ## 如何扩展此 cli 工具
 

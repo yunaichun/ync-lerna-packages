@@ -1,7 +1,7 @@
 {
   "name": "ync-cli-commit-check",
   "author": "yunaichun",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "bin": {
     "ync-commit-check": "bin/index.js"
   },
@@ -28,13 +28,7 @@
   },
   "preferGlobal": true,
   "license": "ISC",
-  "devDependencies": {
-    "husky": "^6.0.0",
-    "@commitlint/cli": "^12.1.1",
-    "@commitlint/config-angular": "^12.1.1",
-    "lint-staged": "^10.5.4",
-    "standard-version": "^9.3.0"
-  },
+  "devDependencies": {},
   "dependencies": {
     "chalk": "^4.1.1",
     "commander": "^7.2.0",
