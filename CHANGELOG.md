@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/yunaichun/ync-lerna-packages/compare/v1.8.0...v1.9.0) (2021-05-07)
+
+
+### Features
+
+* **NoTicket:** add puppeteer performance check ([23ba521](https://github.com/yunaichun/ync-lerna-packages/commit/23ba52142691c0b3b0a8642732d42ac1ea32d83b))
+
 ## [1.8.0](https://github.com/yunaichun/ync-lerna-packages/compare/v1.7.0...v1.8.0) (2021-05-07)
 
 
