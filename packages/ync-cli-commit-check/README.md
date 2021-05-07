@@ -39,8 +39,8 @@ npx ync-commit-check
 ## 参考资料
 
 - [husky 官网](https://typicode.github.io/husky)
-- [介绍Git Hooks](https://zhuanlan.zhihu.com/p/115224711)
+- [commitlint 官网](https://commitlint.js.org)
 - [Git 钩子](https://malcolmyu.github.io/2015/10/16/Git-Hooks/)
-- [commitlint + husky 规范 commit 日志](https://blog.csdn.net/wei371522/article/details/84070803)
 - [Commit message 和 Change log 编写指南](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
+- [commitlint + husky 规范 commit 日志](https://blog.csdn.net/wei371522/article/details/84070803)
 - [从零配置 Eslint + Prettier + husky + lint-staged 构建前端代码工作流](https://segmentfault.com/a/1190000022497035)
