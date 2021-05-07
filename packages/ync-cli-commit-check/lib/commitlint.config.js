@@ -6,7 +6,7 @@ module.exports = {
     'type-case': [0],
     'subject-empty': [0],
     'scope-case': [0],
-    'commit-check': [2, ' always'],
+    'commit-check': [2, 'always'],
   },
   plugins: [
     {

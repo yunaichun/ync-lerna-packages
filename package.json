@@ -13,11 +13,11 @@
     "lerna": "^3.22.1",
     "lint-staged": "^10.5.4",
     "standard-version": "^9.3.0",
-    "ync-cli-commit-check": "^0.1.8",
+    "ync-cli-commit-check": "^0.1.9",
     "ync-cli-eslint-config": "^0.1.2"
   },
   "scripts": {
     "prepare": "husky install",
-    "release": "standard-version"
+    "release": "standard-version && git push --follow-tags origin master"
   }
 }
