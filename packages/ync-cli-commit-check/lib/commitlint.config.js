@@ -3,6 +3,7 @@ module.exports = {
   rules: {
     'type-enum': [0],
     'type-empty': [0],
+    'type-case': [0],
     'subject-empty': [0],
     'scope-case': [0],
     'commit-check': [2, 'always'],
