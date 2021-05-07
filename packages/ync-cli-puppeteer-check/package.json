@@ -1,0 +1,36 @@
+{
+  "name": "ync-cli-puppeteer-check",
+  "author": "yunaichun",
+  "version": "0.0.1",
+  "bin": {
+    "ync-puppeteer-check": "bin/index.js"
+  },
+  "description": "puppeteer 页面内容获取、页面错误捕获、页面性能测试",
+  "keywords": [
+    "puppeteer",
+    "页面内容获取",
+    "页面错误捕获",
+    "页面性能测试"
+  ],
+  "files": [
+    "bin/*",
+    "src/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yunaichun/ync-lerna-packages.git"
+  },
+  "scripts": {
+    "link": "npm link",
+    "test": "npx ync-puppeteer-check"
+  },
+  "preferGlobal": true,
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "commander": "^7.2.0",
+    "cross-spawn": "^7.0.3",
+    "puppeteer": "^9.1.1"
+  }
+}
