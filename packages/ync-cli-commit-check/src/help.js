@@ -6,7 +6,7 @@ const { log } = console;
 const initHelp = ({ packageJson }) => {
   commander
     .version(packageJson.version)
-    .option('-e, --exclude <exclude>', '默认值: false. 是否忽略某个工作流，以,分开')
+    .option('-e, --exclude <exclude>', '默认值: N/A. 是否忽略某个工作流，如有多个以,分开')
     .on('--help', () => {
       log(``);
       log(`  ${cyan('--exclude')} 可以为以下选择组合:`);

@@ -1,7 +1,7 @@
 {
   "name": "ync-cli-commit-check",
   "author": "yunaichun",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "bin": {
     "ync-commit-check": "bin/index.js"
   },
