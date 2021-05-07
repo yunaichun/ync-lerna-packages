@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/yunaichun/ync-lerna-packages/compare/v1.6.0...v1.7.0) (2021-05-07)
+
+
+### Features
+
+* **NoTicket:** remove release scope tips ([a24f2b9](https://github.com/yunaichun/ync-lerna-packages/commit/a24f2b9c785ce6b8399322c1cee77144183832f6))
+* **NoTicket:** update version ([ddcbfc2](https://github.com/yunaichun/ync-lerna-packages/commit/ddcbfc2159d7ca6330491f7c87d500d6325b54e9))
+
+
+### Bug Fixes
+
+* **NoTicket:** fix bug ([c4564f6](https://github.com/yunaichun/ync-lerna-packages/commit/c4564f69c323671c51e9ce1574993912f928839b))
+
 ## [1.6.0](https://github.com/yunaichun/ync-lerna-packages/compare/v1.5.0...v1.6.0) (2021-05-07)
 
 
