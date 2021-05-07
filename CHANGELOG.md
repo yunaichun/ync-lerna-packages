@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/yunaichun/ync-lerna-packages/compare/v1.7.0...v1.8.0) (2021-05-07)
+
+
+### Features
+
+* **NoTicket:** modify docs ([37045bb](https://github.com/yunaichun/ync-lerna-packages/commit/37045bba6150b88558da5ae43616018becce3024))
+* **NoTicket:** update help ([3d0e328](https://github.com/yunaichun/ync-lerna-packages/commit/3d0e32872a80e73b1a47b9dec570cce1cb65e9ca))
+
 ## [1.7.0](https://github.com/yunaichun/ync-lerna-packages/compare/v1.6.0...v1.7.0) (2021-05-07)
 
 
