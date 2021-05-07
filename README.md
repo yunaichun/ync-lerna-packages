@@ -14,7 +14,6 @@ npm install
 [eslint config 脚手架](https://github.com/yunaichun/ync-lerna-packages/tree/master/packages/ync-cli-eslint-config)
 [commit check 脚手架](https://github.com/yunaichun/ync-lerna-packages/tree/master/packages/ync-cli-commit-check)
 
-
 #### lerna 使用
 
 ```bash
