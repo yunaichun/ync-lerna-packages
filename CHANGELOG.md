@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/yunaichun/ync-lerna-packages/compare/v1.4.0...v1.5.0) (2021-05-07)
+
+
+### Features
+
+* modify file and method name ([7220c82](https://github.com/yunaichun/ync-lerna-packages/commit/7220c82566ad708ca51f83770ff7f00ded89187a))
+* update file ([12fbd91](https://github.com/yunaichun/ync-lerna-packages/commit/12fbd91d440a08adbd3b2af1cbb6e04052eab4c8))
+* upgrade ync-cli-commit-check packages ([57435d5](https://github.com/yunaichun/ync-lerna-packages/commit/57435d5b02ff806e4f56ef7470f1dd1dac5846f1))
+
 ## [1.4.0](https://github.com/yunaichun/ync-lerna-packages/compare/v1.3.1...v1.4.0) (2021-05-07)
 
 
