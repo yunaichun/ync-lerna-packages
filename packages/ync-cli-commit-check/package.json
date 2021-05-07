@@ -1,11 +1,11 @@
 {
   "name": "ync-cli-commit-check",
   "author": "yunaichun",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "bin": {
     "ync-commit-check": "bin/index.js"
   },
-  "description": "husky, lint-staged, commit msg 代码提交规划检查",
+  "description": "husky, commit-msg, pre-commit, standard-version 代码提交工作流",
   "keywords": [
     "husky",
     "hooks",

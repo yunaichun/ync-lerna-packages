@@ -8,11 +8,11 @@ const addScript = async options => {
   const str = fs.readFileSync(path.join(process.cwd(), 'package.json'), 'utf-8');
   const json = JSON.parse(str);
   if (!json.scripts) json.scripts = {};
-  if (!json.scripts['release']) {
-    json.scripts['release'] = 'standard-version'
+  if (!json.scripts.release) {
+    json.scripts.release = 'standard-version'
   } else {
-    const index = json.scripts['release'].indexOf('standard-version')
-    if (index < 0) json.scripts['release'] += ' && standard-version'
+    const index = json.scripts.release.indexOf('standard-version')
+    if (index < 0) json.scripts.release += ' && standard-version'
   }
 
   fs.writeFileSync(
