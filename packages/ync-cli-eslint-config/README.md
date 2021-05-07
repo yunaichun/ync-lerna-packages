@@ -65,12 +65,12 @@ npx ync-eslint-config -t -a -f react
 
 ## 参数描述
 
-| 参数名 | 说明 | 默认值 |
-| --- | --- | --- |
-| -f， --framework | 项目使用的框架 , 不传则使用 Javascript 相关 Eslint 配置 | false |
-| -t， --typescript | 项目是否使用了 Typescript , 为 true 则添加 Typescript 相关 Eslint 配置 | false |
-| -a， --alias | 项目是否使用了 webpack alias | false |
-| -c， --cypress | 项目是否使用了 Cypress | false |
+| 参数名 | 类型 | 说明 | 默认值 | 必须 |
+| --- | --- | --- | --- | --- |
+| -f， --framework | String | 项目使用的框架 , 不传则使用 Javascript 相关 Eslint 配置 | N/A | 否 |
+| -t， --typescript | Boolean | 项目是否使用了 Typescript , 为 true 则添加 Typescript 相关 Eslint 配置 | false | 否 |
+| -a， --alias | Boolean | 项目是否使用了 webpack alias | false | 否 |
+| -c， --cypress | Boolean | 项目是否使用了 Cypress | false | 否 |
 
 ## IDE 配置
 

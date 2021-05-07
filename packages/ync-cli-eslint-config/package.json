@@ -1,7 +1,7 @@
 {
   "name": "ync-cli-eslint-config",
   "author": "yunaichun",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "bin": {
     "ync-eslint-config": "bin/index.js"
   },

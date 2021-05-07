@@ -3,7 +3,7 @@ const path = require('path');
 
 const addLintFile = async options => {
   const { exclude = '' } = options;
-  if (exclude.split(',').indexOf('l') > -1) return;
+  if (exclude.split(',').indexOf('f') > -1) return;
 
   // == 添加 commitlint
   fs.copyFileSync(

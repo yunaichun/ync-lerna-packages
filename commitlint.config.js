@@ -23,7 +23,7 @@ module.exports = {
           const illegalType = types.indexOf(type) < 0;
           if (illegalType) return [false, `type 请填写: ${types.join(', ')} ${tips}`];
 
-          // == 验证 scope 
+          // == 验证 scope
           const scopePattern = /release|NoTicket|[A-Z]+-\d+/;
           if (!scopePattern.test(scope)) return [false, `scope 请填写: jiraID, NoTicket ${tips}`];
           return [true];
