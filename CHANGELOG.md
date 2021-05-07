@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/yunaichun/ync-lerna-packages/compare/v1.5.0...v1.6.0) (2021-05-07)
+
+
+### Features
+
+* **NoTicket:** remove ype-case rules ([f402957](https://github.com/yunaichun/ync-lerna-packages/commit/f40295778dacc343e29ff7fd2a50463df9cf90c6))
+* **NoTicket:** update commit check version ([4a32e81](https://github.com/yunaichun/ync-lerna-packages/commit/4a32e818c0556a13a72bb8de7199552d4d0dffc1))
+* **NoTicket:** update commitlint config ([b883265](https://github.com/yunaichun/ync-lerna-packages/commit/b883265ae0cf51398aee68d8face86748e810b01))
+* **NoTicket:** upgrade ync-cli-commit-check version ([b4a562a](https://github.com/yunaichun/ync-lerna-packages/commit/b4a562acbbb004b472ac8c7ff1ca5e02c6f9a151))
+
 ## [1.5.0](https://github.com/yunaichun/ync-lerna-packages/compare/v1.4.0...v1.5.0) (2021-05-07)
 
 
