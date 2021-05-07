@@ -14,9 +14,7 @@
     "lint-staged": "^10.5.4",
     "standard-version": "^9.3.0",
     "ync-cli-commit-check": "^0.1.4",
-    "ync-cli-eslint-config": "^0.1.2",
-    "ync-commit-check-cli": "0.0.6",
-    "ync-common-eslint-config": "0.0.13"
+    "ync-cli-eslint-config": "^0.1.2"
   },
   "scripts": {
     "prepare": "husky install",
