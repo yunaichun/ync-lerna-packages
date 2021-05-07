@@ -11,8 +11,6 @@
 # 安装依赖
 npm install
 ```
-[eslint config 脚手架](https://github.com/yunaichun/ync-lerna-packages/tree/master/packages/ync-cli-eslint-config)
-[commit check 脚手架](https://github.com/yunaichun/ync-lerna-packages/tree/master/packages/ync-cli-commit-check)
 
 #### lerna 使用
 
@@ -34,5 +32,8 @@ lerna publish
 ```
 
 ## 参考地址
+
 - [lerna 官方 repeo](https://github.com/lerna/lerna)
 - [使用lerna优雅地管理多个package](https://zhuanlan.zhihu.com/p/35237759)
+- [eslint config 脚手架](https://github.com/yunaichun/ync-lerna-packages/tree/master/packages/ync-cli-eslint-config)
+- [commit check 脚手架](https://github.com/yunaichun/ync-lerna-packages/tree/master/packages/ync-cli-commit-check)
