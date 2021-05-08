@@ -15,19 +15,19 @@ module.exports = (_performance) => {
   } = _performance.timing;
   const performance = {};
 
-  // dns查询
+  // == dns查询时间
   performance.dns = domainLookupEnd - domainLookupStart;
-  // tcp连接
+  // == tcp连接时间
   performance.tcp = connectEnd - connectStart;
-  // 白屏耗时
-  performance.whiteScreen = responseStart - navigationStart;
-  // 请求响应
+  // == request请求时间
   performance.request = responseEnd - responseStart;
-  // domReady
-  performance.domReady = domContentLoadedEventEnd - navigationStart;
-  // dom解析
+  // == 白屏时间
+  performance.whiteScreen = responseStart - navigationStart;
+  // ==dom树解析时间
   if (domComplete > 0) performance.domParsed = domComplete - domInteractive;
-  // onLoad时间
+  // == domReady时间
+  performance.domReady = domContentLoadedEventEnd - navigationStart;
+  // == onLoad时间
   if (loadEventEnd > 0) performance.pageReady = loadEventEnd - navigationStart;
 
   return performance;

@@ -1,8 +1,14 @@
 ## 简介
 
-- 页面内容获取
-- 页面错误捕获
-- 页面性能测试
+通过 puppeteer 和 window.performance API，结合命令行工具可以获取页面 url 在 3g/4g 网络下的页面性能，具体包括：
+
+- dns查询时间
+- tcp连接时间
+- request请求时间
+- 白屏时间
+- dom树解析时间
+- domReady时间
+- onLoad时间
 
 ## 如何扩展此 cli 工具
 
@@ -44,3 +50,4 @@ npx ync-puppeteer-check -u https://www.answera.top -n 4g
 
 - [puppeteer 中文官网](https://www.kancloud.cn/luponu/puppeteer/870142)
 - [Puppeteer 入门与实战](https://segmentfault.com/a/1190000023601892)
+- [前端性能监控：window.performance](https://www.cnblogs.com/libin-1/p/6501951.html)
