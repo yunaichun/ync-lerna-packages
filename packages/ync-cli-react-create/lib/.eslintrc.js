@@ -1,0 +1,1 @@
+module.exports = { "extends": ["ync-cli-eslint-config/lib/eslint/javascript.js", "ync-cli-eslint-config/lib/eslint/react.js"] }

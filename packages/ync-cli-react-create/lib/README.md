@@ -8,17 +8,14 @@ React 组件 npm 包模版。
 # 安装依赖
 npm ci
 
-# eslint 规范
-npm run lint
-
-# test 测试用例
+# 测试用例
 npm run test
 
 # 发布前构建
 npm run build
 
 # 发布
-npm publish
+npm run release
 ```
 
 ## 如何使用

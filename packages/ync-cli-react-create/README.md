@@ -21,11 +21,20 @@ npm publish --access=public
 
 ## 如何使用此 cli 工具
 
+#### 全局安装
+
 ```bash
-# 全局安装
 npm install ync-cli-react-create -g
 
-# 使用方法
+ync-react-create
+```
+
+#### 本地安装
+
+```bash
+
+npm install ync-cli-react-create -D
+
 ync-react-create
 ```
 

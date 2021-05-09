@@ -1,10 +1,8 @@
 const commander = require('commander');
 const chalk = require('chalk');
+const log = require('../utils/log');
 
-const packageJson = require('../package.json');
-const log = console.log;
-
-function initHelp() {
+const initCommander = ({ packageJson }) => {
   commander
     .version(packageJson.version)
     .on('--help', () => {
@@ -13,4 +11,4 @@ function initHelp() {
     .parse(process.argv);
 }
 
-module.exports = initHelp;
+module.exports = initCommander;

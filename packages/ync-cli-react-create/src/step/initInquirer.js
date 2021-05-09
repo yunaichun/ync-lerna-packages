@@ -71,9 +71,7 @@ const keywords = {
   type: 'input',
   name: 'keywords',
   message: 'keywords, such as React,xxx',
-  filter: function (value) {
-    return value.split(',');
-  }
+  filter: value => value.split(',')
 };
 
 // == git 仓库地址
@@ -84,7 +82,7 @@ const git = {
   default: 'https://github.com'
 };
 
-async function getUserInput() {
+const initInquirer = async () => {
   const userInput1 = await inquirer.prompt([choice]);
   if (userInput1.choice === 'create-react-app') {
     return userInput1;
@@ -101,4 +99,4 @@ async function getUserInput() {
   return { ...userInput2, ...userInput1 };
 }
 
-module.exports = getUserInput;
+module.exports = initInquirer;

@@ -8,7 +8,7 @@ module.exports = {
   mode: 'production',
 
   entry: './src/index.js',
-  
+
   output: {
     path: path.resolve('dist'),
     filename: `index.js`,
@@ -31,7 +31,7 @@ module.exports = {
         test: /\.(css|less)$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: ['css-loader','less-loader']
+          use: ['css-loader', 'less-loader']
         }),
       }
     ]
@@ -46,8 +46,8 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     })
   ],
-  
-  externals: { 
+
+  externals: {
     'react': {
       root: "React",
       commonjs2: "react",

@@ -1,0 +1,36 @@
+{
+  "name": "ync-cli-ci-cd",
+  "author": "yunaichun",
+  "version": "0.1.12",
+  "bin": {
+    "ync-ci-cd": "bin/index.js"
+  },
+  "description": "本地化CI/CD：分支检测、代码扫描、构建、发布、通知",
+  "keywords": [
+    "分支检测",
+    "代码扫描",
+    "构建",
+    "发布",
+    "通知"
+  ],
+  "files": [
+    "bin/*",
+    "src/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yunaichun/ync-lerna-packages.git"
+  },
+  "scripts": {
+    "link": "npm link",
+    "test": "npx ync-ci-cd"
+  },
+  "preferGlobal": true,
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "commander": "^7.2.0",
+    "cross-spawn": "^7.0.3"
+  }
+}
