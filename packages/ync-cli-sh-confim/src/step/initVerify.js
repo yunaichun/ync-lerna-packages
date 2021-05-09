@@ -1,8 +1,8 @@
 const { exec } = require('child_process');
 const chalk = require('chalk');
+const { popConfim } = require('../utils/confom');
+const log = require('../utils/log');
 
-const { popConfim } = require('./confom');
-const log = console.log;
 
 const initVerify = async () => {
   const commandArgs = process.argv.slice(2);

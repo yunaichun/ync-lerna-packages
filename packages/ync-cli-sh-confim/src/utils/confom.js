@@ -9,7 +9,7 @@ const inputConfim = async ({
   const { field } = await inquirer.prompt([{
     type: 'confirm',
     name: 'field',
-    message: message,
+    message,
     default: false
   }]);
   return field;
@@ -26,12 +26,13 @@ const popConfim = async ({
     OK: '[O] OK',
     close: '[X] Close',
   }) => {
-  return await confirmation(
+  const confim = await confirmation(
     title,
     message,
     OK,
     close
   )
+  return confim;
 }
 module.exports = {
   inputConfim,

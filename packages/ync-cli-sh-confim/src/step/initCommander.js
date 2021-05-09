@@ -1,10 +1,9 @@
+/* eslint-disable class-methods-use-this */
 const commander = require('commander');
 const chalk = require('chalk');
+const log = require('../utils/log');
 
-const packageJson = require('../package.json');
-const log = console.log;
-
-const initHelp = async () => {
+const initCommander = async ({ packageJson }) => {
   commander
     .version(packageJson.version)
     .on('--help', () => {
@@ -14,4 +13,4 @@ const initHelp = async () => {
     .parse(process.argv);
 }
 
-module.exports = initHelp;
+module.exports = initCommander;
