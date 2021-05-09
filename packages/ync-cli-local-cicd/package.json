@@ -1,9 +1,9 @@
 {
-  "name": "ync-cli-ci-cd",
+  "name": "ync-cli-local-cicd",
   "author": "yunaichun",
-  "version": "0.1.12",
+  "version": "0.0.1",
   "bin": {
-    "ync-ci-cd": "bin/index.js"
+    "ync-local-cicd": "bin/index.js"
   },
   "description": "本地化CI/CD：分支检测、代码扫描、构建、发布、通知",
   "keywords": [
