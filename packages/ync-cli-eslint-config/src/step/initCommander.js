@@ -1,9 +1,8 @@
 const commander = require('commander');
 const { green, cyan, yellow } = require('chalk');
+const log = require('../utils/log');
 
-const { log } = console;
-
-const initHelp = ({ packageJson }) => {
+const initCommander = ({ packageJson }) => {
   commander
     .version(packageJson.version)
     .option('-a, --alias', '默认值: false, 是否使用了 webpack alias')
@@ -23,4 +22,4 @@ const initHelp = ({ packageJson }) => {
   return commander;
 }
 
-module.exports = initHelp;
+module.exports = initCommander;

@@ -1,6 +1,6 @@
 ## 简介
 
-- eslint, tslint, prettier 配置方案
+eslint, prettier 配置方案
 
 ## 如何扩展此 cli 工具
 
