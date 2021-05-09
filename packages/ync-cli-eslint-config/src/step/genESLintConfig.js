@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const genESLintConfigFile = async (options) => {
+const genESLintConfigFile = async options => {
   const { framework, typescript, alias, cypress, packageJson } = options;
   const config = {
     extends: [`${packageJson.name}/lib/eslint/javascript.js`],

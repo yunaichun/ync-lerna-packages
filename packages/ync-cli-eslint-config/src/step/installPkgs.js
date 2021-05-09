@@ -1,6 +1,6 @@
 const spawn = require('cross-spawn');
 
-const installPkgs = async (options) => {
+const installPkgs = async options => {
   const { framework, typescript, alias, cypress } = options;
   const pkgs = ['eslint-config-airbnb'];
 

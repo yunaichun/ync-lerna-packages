@@ -1,7 +1,7 @@
 {
   "name": "ync-cli-puppeteer-check",
   "author": "yunaichun",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "bin": {
     "ync-puppeteer-check": "bin/index.js"
   },

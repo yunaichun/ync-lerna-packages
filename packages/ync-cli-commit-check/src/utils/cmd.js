@@ -1,7 +1,7 @@
 const spawn = require('cross-spawn');
 
 /**
- * 执行 bash 命令
+ * 执行 shell 命令
  * @param {String} command
  * @param {Array} args
  */
@@ -12,7 +12,7 @@ const cmd = (command, args = []) => new Promise((resolve, reject) => {
       reject(code);
       return;
     }
-    resolve();
+    resolve(code);
   });
 });
 
