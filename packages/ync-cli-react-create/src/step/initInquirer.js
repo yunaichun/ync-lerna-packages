@@ -83,10 +83,11 @@ const git = {
 };
 
 const initInquirer = async () => {
-  const userInput1 = await inquirer.prompt([choice]);
-  if (userInput1.choice === 'create-react-app') {
-    return userInput1;
-  }
+  const userInput1 = await inquirer.prompt([
+    choice,
+    projectName
+  ]);
+  if (userInput1.choice === 'create-react-app') return userInput1;
   const userInput2 = await inquirer.prompt([
     projectName,
     libraryName,
