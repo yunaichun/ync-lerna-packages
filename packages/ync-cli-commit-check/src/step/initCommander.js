@@ -1,9 +1,8 @@
 const commander = require('commander');
 const { green, cyan, yellow } = require('chalk');
+const log = require('../utils/log');
 
-const { log } = console;
-
-const initHelp = ({ packageJson }) => {
+const initCommander = ({ packageJson }) => {
   commander
     .version(packageJson.version)
     .option('-e, --exclude <exclude>', '默认值: N/A. 是否忽略某个工作流，如有多个以,分开')
@@ -24,4 +23,4 @@ const initHelp = ({ packageJson }) => {
   return commander;
 }
 
-module.exports = initHelp;
+module.exports = initCommander;

@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { cmd } = require('../utils');
+const cmd = require('../utils/cmd');
 
 const addHook = async (name, content) => {
   // == 创建 husky 指定钩子: 生成文件

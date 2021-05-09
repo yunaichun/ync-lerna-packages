@@ -1,13 +1,4 @@
 const spawn = require('cross-spawn');
-const chalk = require('chalk');
-
-/**
- * 日志打印
- * @param String msg
- */
-const log = msg => {
-  console.log(chalk.red(`commit check --> ${msg}, skipping hooks installation`))
-};
 
 /**
  * 执行 bash 命令
@@ -25,7 +16,4 @@ const cmd = (command, args = []) => new Promise((resolve, reject) => {
   });
 });
 
-module.exports = {
-  log,
-  cmd
-};
+module.exports = cmd;

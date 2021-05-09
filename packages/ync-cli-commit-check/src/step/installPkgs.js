@@ -1,4 +1,4 @@
-const { cmd } = require('../utils');
+const cmd = require('../utils/cmd');
 
 const installPkgs = async options => {
   const { exclude = '' } = options;

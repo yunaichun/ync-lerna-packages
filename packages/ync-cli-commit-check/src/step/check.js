@@ -1,5 +1,6 @@
 const fs = require('fs');
-const { cmd, log } = require('../utils');
+const cmd = require('../utils/cmd');
+const log = require('../utils/log');
 
 const check = async options => {
   const { exclude = '' } = options;
