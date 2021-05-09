@@ -1,7 +1,6 @@
 const commander = require('commander');
 const { green, cyan, yellow } = require('chalk');
-
-const { log } = console;
+const log = require('../utils/log');
 
 const initCommander = ({ packageJson }) => {
   commander
