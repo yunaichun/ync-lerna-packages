@@ -10,6 +10,12 @@
 - domReady时间
 - onLoad时间
 
+同时可以捕获页面的报错信息，具体包括：
+
+- 监听页面error事件：捕获页面崩溃错误信息
+- 监听页面pageerror事件：捕获页面报错信息
+- 监听页面requestfailed事件：捕获页面请求失败信息
+
 ## 如何扩展此 cli 工具
 
 ```bash

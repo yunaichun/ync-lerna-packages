@@ -1,4 +1,5 @@
-const initHelp = require('./help');
+/* eslint-disable class-methods-use-this */
+const initCommander = require('./step/initCommander');
 const checkParams = require('./step/checkParams');
 // const getPageContent = require('./step/getPageContent');
 // const getPageError = require('./step/getPageError');
@@ -8,7 +9,7 @@ const packageJson = require('../package.json');
 class Creation {
   // eslint-disable-next-line class-methods-use-this
   async do() {
-    const commander = await initHelp({ packageJson });
+    const commander = await initCommander({ packageJson });
     const options = commander.opts();
 
     await checkParams(options);

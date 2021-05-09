@@ -3,7 +3,7 @@ const { green, cyan, yellow } = require('chalk');
 
 const { log } = console;
 
-const initHelp = ({ packageJson }) => {
+const initCommander = ({ packageJson }) => {
   commander
     .version(packageJson.version)
     .option('-u, --url <url>', '默认值: N/A. 测试页面地址')
@@ -22,4 +22,4 @@ const initHelp = ({ packageJson }) => {
   return commander;
 }
 
-module.exports = initHelp;
+module.exports = initCommander;
