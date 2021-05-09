@@ -1,5 +1,6 @@
 const puppeteer = require('puppeteer');
 
+// == 创建无头浏览器
 const createBrowser = ({ headless = true } = {}) => {
   const params = headless ? {
     headless: true,
