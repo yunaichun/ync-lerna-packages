@@ -1,7 +1,7 @@
 {
   "name": "ync-cli-react-create",
   "author": "yunaichun",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "bin": {
     "ync-react-create": "bin/index.js"
   },
