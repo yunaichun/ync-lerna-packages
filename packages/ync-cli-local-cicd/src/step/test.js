@@ -1,0 +1,24 @@
+/* eslint-disable prefer-promise-reject-errors */
+const chalk = require('chalk');
+const log = require('../utils/log');
+const { syncCmd } = require('../utils/cmd');
+
+const test = async ({ options, config, packageJson }) => {
+  const { flow } = options;
+  const { flows } = config[flow];
+  const { cmd } = flows.install;
+  const scripts = packageJson.script;
+  const exist = scripts.test;
+
+  // == 执行测试命令
+  log(`--> test ${exist ? '...' : chalk.yellow(`忽略测试命令${cmd.join(' ')}`)}`);
+  const startTime = new Date();
+  const res = syncCmd(cmd);
+  if (res.status !== 0) return Promise.reject(`测试未通过，请检查！`);
+  const duration = new Date() - startTime;
+  log(`<-- test ${exist ? chalk.green('success') : chalk.yellow('ignore')} ${duration}ms`);
+
+  return null;
+}
+
+module.exports = test;

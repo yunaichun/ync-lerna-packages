@@ -12,7 +12,7 @@ class Creation {
     if (!options.flow) options.flow = 'prd';
 
     await check({ options, config });
-    // await install({ options, config });
+    await install({ options, config, packageJson });
   }
 }
 
