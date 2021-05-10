@@ -23,7 +23,7 @@
   },
   "scripts": {
     "link": "npm link",
-    "test": "npx ync-ci-cd"
+    "test": "npx ync-local-cicd"
   },
   "preferGlobal": true,
   "license": "ISC",
