@@ -11,8 +11,8 @@ module.exports = {
     scan: {},
     install: { cmd: ['npm', 'ci'] },
     test: { cmd: ['npm', 'run', 'test'] },
-    build: { cmd: ['npm', 'run', 'build'] },
-    put: { cmd: ['npm', 'run', 'deploy'] },
+    build: { cmd: ['npm', 'run', 'build:stg'] },
+    put: { cmd: ['npm', 'run', 'deploy:stg'] },
   },
   hosts: {
   }

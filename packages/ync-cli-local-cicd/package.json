@@ -5,13 +5,16 @@
   "bin": {
     "ync-local-cicd": "bin/index.js"
   },
-  "description": "本地化CI/CD：分支检测、代码扫描、构建、发布、通知",
+  "description": "本地化CI/CD工具",
   "keywords": [
-    "分支检测",
+    "安全检测",
     "代码扫描",
-    "构建",
-    "发布",
-    "通知"
+    "安装依赖",
+    "执行测试",
+    "打包构建",
+    "预发布",
+    "生产发布",
+    "消息通知"
   ],
   "files": [
     "bin/*",
@@ -31,6 +34,7 @@
   "dependencies": {
     "chalk": "^4.1.1",
     "commander": "^7.2.0",
-    "cross-spawn": "^7.0.3"
+    "cross-spawn": "^7.0.3",
+    "inquirer": "^8.0.0"
   }
 }

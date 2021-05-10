@@ -6,8 +6,9 @@ const spawn = require('cross-spawn');
  */
 const cmd = (args = [], inherit = true) =>
   new Promise((resolve, reject) => {
-    const command = args.shift();
-    const child = spawn(command, args, inherit ? { stdio: 'inherit' } : {});
+    const newArgs = args.slice();
+    const command = newArgs.shift();
+    const child = spawn(command, newArgs, inherit ? { stdio: 'inherit' } : {});
     child.on('close', code => {
       if (code !== 0) {
         reject(code);
@@ -22,8 +23,9 @@ const cmd = (args = [], inherit = true) =>
  * @param {Array} args
  */
 const syncCmd = (args = [], inherit = false) => {
-  const command = args.shift();
-  return spawn.sync(command, args, inherit ? { stdio: 'inherit' } : {});
+  const newArgs = args.slice();
+  const command = newArgs.shift();
+  return spawn.sync(command, newArgs, inherit ? { stdio: 'inherit' } : {});
 }
 
 module.exports = {
